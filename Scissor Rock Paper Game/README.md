@@ -1,6 +1,6 @@
-# Rock, Scissor, Paper Game
+# Scissor, Rock, Paper Game
 
-This application is about the classic scissors, stone, paper game. The principle is simple: first you choose your "object", than the computer picks one. After that, you will see what the computer has picked and if you have won, lost or it is a draw.
+This application is about the classic scissors, rock, paper game. The principle is simple: first you choose your "object", than the computer picks one. After that, you will see what the computer has picked and if you have won, lost or it is a draw.
 
 The computer picks a random element -> in background there is an array in which all possible options are stored. Via a random variable, the computer access an element in array.
 
