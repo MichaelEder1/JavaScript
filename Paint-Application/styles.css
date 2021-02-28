@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+}
+
+#paintArea {
+    width: 800px;
+    height: 500px;
+    border: 1px solid #cdcdcd;
+    background: #efefef;
+}
+
+.form {
+    margin-top: 20px;
+}
+
+label {
+    width: 100px;
+    float: left;
+}
+
+.clear {
+    clear: both;
+}
+
+input {
+    border: 1px solid #cdcdcd;
+}
+
+.input {
+    margin-bottom: 5px;
+}

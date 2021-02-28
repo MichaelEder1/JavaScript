@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Aufgaben-Liste</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+<div id="wrapper">
+    <h1>Aufgaben Liste</h1>
+    <div id="form">
+        <form method="post" action="#" id="taskEntryForm">
+            <label for="task">Task</label>
+            <input type="text" name="task" id="task" placeholder="Aufgabe 1 ..." required>
+            <label for="names">Person:</label>
+            <select id="names">
+            </select>
+            <br>
+            <label for="description">Beschreibung</label>
+            <textarea id="description" name="description" placeholder="Beschreibung eingeben (optional) ..."></textarea>
+            <br>
+            <button type="button" id="addTask" value="Hinzuf&uuml;gen">Hinzufügen</button>
+        </form>
+    </div>
+    <div id="buttons">
+        <button type="button" id="addSubTask" value="Subtaks hinzufügen">Subtask hinzuf&uuml;gen</button>
+        <button type="button" id="showOpenTasks" value="Offene anzeigen">offene Anzeigen</button>
+        <button type="button" id="showAllTasks" value="Alle anzeigen">Alle anzeigen</button>
+        <hr>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="objects.js"></script>
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>

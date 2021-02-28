@@ -1,0 +1,132 @@
+﻿{
+  "name": "covidSocialShopping",
+  "elements": [
+    {
+      "type": "person",
+      "firstName": "Tom",
+      "lastName": "Honer",
+      "job": 0,
+      "shoppingList": [
+        {
+          "shoppingListName": "Silvester",
+          "createdOn": "18.12.2020",
+          "dueDate": "31.12.2020",
+          "article": [
+            {
+              "articleName": "Apfel",
+              "articleQuantity": "1 kg",
+              "maxPrice": 2
+            },
+            {
+              "articleName": "Faschiertes",
+              "articleQuantity": "500 g",
+              "maxPrice": 2.99
+            },
+            {
+              "articleName": "Fischstäbchen",
+              "articleQuantity": "1 Pkg",
+              "maxPrice": 3.00
+            },
+            {
+              "articleName": "Fanta",
+              "articleQuantity": "2l",
+              "maxPrice": 1.50
+            },
+            {
+              "articleName": "Frankfurter",
+              "articleQuantity": "4er Pkg",
+              "maxPrice": 2.99
+            },
+            {
+              "articleName": "Milka Oreo",
+              "articleQuantity": "1 Tafel",
+              "maxPrice": 1.00
+            },
+            {
+              "articleName": "Haribo Tropifrutti",
+              "articleQuantity": "2 Pkg",
+              "maxPrice": 2.00
+            }
+          ]
+        },
+        {
+          "shoppingListName": "Wocheneinkauf - KW01/2021",
+          "createdOn": "03.01.2021",
+          "dueDate": "08.01.2021",
+          "article": [
+            {
+              "articleName": "Butter",
+              "articleQuantity": "1 Pkg",
+              "maxPrice": 1.50
+            },
+            {
+              "articleName": "Toastbrot ÖLZ",
+              "articleQuantity": "1 Pkg",
+              "maxPrice": 2.50
+            },
+            {
+              "articleName": "Burger Patties",
+              "articleQuantity": "500 g",
+              "maxPrice": 4.99
+            },
+            {
+              "articleName": "Frischfisch",
+              "articleQuantity": "300 g",
+              "maxPrice": 6.99
+            },
+            {
+              "articleName": "Kopfsalat",
+              "articleQuantity": "1",
+              "maxPrice": 2.29
+            },
+            {
+              "articleName": "Rispentomaten",
+              "articleQuantity": "500 g",
+              "maxPrice": 2.79
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "person",
+      "firstName": "Hannelore",
+      "lastName": "Fischer",
+      "job": 0,
+      "shoppingList": [
+        {
+          "shoppingListName": "Katze",
+          "createdOn": "28.12.2020",
+          "dueDate": "04.01.2021",
+          "article": [
+            {
+              "articleName": "Sheba mit Fisch (Sauce)",
+              "articleQuantity": "10 Säckchen",
+              "maxPrice": 3
+            },
+            {
+              "articleName": "Gourmet mit Huhn",
+              "articleQuantity": "10 Dosen",
+              "maxPrice": 3
+            },
+            {
+              "articleName": "Felix Dreamis mit Käse",
+              "articleQuantity": "1 Sackerl",
+              "maxPrice": 1.50
+            },
+            {
+              "articleName": "Sheba Soup (Thunfisch)",
+              "articleQuantity": "1 Pkg",
+              "maxPrice": 1.80
+            },
+            {
+              "articleName": "Katzenstreu",
+              "articleQuantity": "10l Sack",
+              "maxPrice": 4.99
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

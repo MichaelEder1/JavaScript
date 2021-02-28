@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: shoppingList.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: shoppingList.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @author Michael Eder (S1910456008)
+ */
+
+let idOfShoppingList = 0;
+
+export default class ShoppingList
+{
+    constructor(name, person, createdOn, dueDate)
+    {
+        this.articles = new Map();
+        this.createdBy = person;
+        this.createdOn = createdOn;
+        this.shoppingListName = name;
+        this.dueDate = dueDate;
+        this.shoppingListId = idOfShoppingList;
+        this.takenOverBy = undefined;
+        this.totalSum = undefined;
+        this.shoppingListState = 0; //0 = open | 1 = locked | 2 = taken over | 3 = finished
+        idOfShoppingList++;
+    }
+
+    /**
+     * This method adds an article to the shoppingList
+     * @param article the article which should be added
+     */
+    addArticleToShoppingList(article)
+    {
+        this.articles.set(article.articleId, article);
+    }
+
+    /**
+     * This method returns the id of an shoppingList
+     * @returns {number} the shoppingList's id
+     */
+    getShoppingListId()
+    {
+        return this.shoppingListId;
+    }
+
+    /**
+     * This method returns the creator of an shoppingList
+     * @returns {*} creator of a shoppingList as Person object
+     */
+    getCreator()
+    {
+        return this.createdBy;
+    }
+
+    /**
+     * This method returns the state of an shoppingList
+     * @returns {number} the current state of a shoppingList
+     */
+    getShoppingListState()
+    {
+        return this.shoppingListState;
+    }
+
+    /**
+     * This method checks, if an shoppingList is open or not
+     * @returns {boolean} true, if shoppingList state = 0 (open), else false
+     */
+    shoppingListIsEditable()
+    {
+        return this.shoppingListState === 0;
+    }
+
+    /**
+     * This method deletes an article from a shoppingList
+     * @param article the article which should be deleted
+     */
+    deleteArticleFromShoppingList(article)
+    {
+        this.articles.delete(article.articleId);
+    }
+
+    /**
+     * This method prints the shoppingList into HTML
+     * @param target the target, the shoppingList should be printed in HTML
+     */
+    printShoppinglist(target)
+    {
+        //Ausgabe Überblick + Header Detailview
+        let htmlCode = `
+		&lt;div class="listEntry">
+			&lt;i class="icon fas fa-lock-open" title="Liste offen">&lt;/i>
+			&lt;h3 class="nameOfListCreator">${this.createdBy.firstName + ' ' + this.createdBy.lastName}&lt;/h3>
+			&lt;h4 class="nameOfList">${this.shoppingListName}&lt;/h4>
+			&lt;p class="Articles">&lt;span class="numberOfArticles">${this.articles.size}&lt;/span> Artikel&lt;/p>
+			&lt;a class="linkDetailView">Details ansehen&lt;/a>
+		&lt;/div>
+		
+		&lt;div class="detailView">
+		&lt;h2>Liste von &lt;span class="createdBy">${this.createdBy.firstName + ' ' + this.createdBy.lastName}&lt;/span> - &lt;span class="nameOfShoppingList">${this.shoppingListName}&lt;/span>&lt;span class="seeker editIcons">&lt;i class="editList editIcon fas fa-edit">&lt;/i>&lt;/span>&lt;/h2>
+			&lt;div class="listInfo">
+				&lt;div class="listInfoArticles">Artikel: &lt;span class="listInfoArtictlesNumberOfItems">${this.articles.size}&lt;/span>&lt;/div>
+				&lt;div class="listInfoCreatedOn">erstellt am: &lt;span class="listInfoCreatedOnDate">${this.createdOn}&lt;/span>&lt;/div>
+				&lt;div class="listInfoDueDate">erfüllen bis: &lt;span class="listInfoDueDateDate">${this.dueDate}&lt;/span> &lt;span class="seeker editIcons">&lt;i class="editList editIcon fas fa-edit">&lt;/i>&lt;/span>&lt;/div>
+			&lt;/div>
+
+		&lt;div class="tableContainer">
+			&lt;div class="flex-table header">
+				&lt;div class="flex-row headings">Anzahl/Einheit&lt;/div>
+				&lt;div class="flex-row headings">Artikel&lt;/div>
+				&lt;div class="flex-row headings">max. Kosten (in €)&lt;/div>
+			&lt;/div>`;
+
+        for (let article of this.articles.values())
+        {
+            htmlCode += article.printArticle()
+        }
+        htmlCode += `
+				&lt;span class="buttonContainer">
+            		&lt;button class="button editButton detailView seeker" type="button">Liste bearbeiten&lt;/button>
+            		&lt;button class="button deleteButton detailView seeker" type="button">Liste löschen&lt;/button>
+            		&lt;button class="button takeOverButton detailView helper" type="button">Liste &amp;uuml;bernehmen&lt;/button>
+        		&lt;/span>
+				&lt;div class="totalAmount helper takenOver">
+					&lt;label for="inputTotalAmount">Gesamtpreis (in €): &lt;/label>
+					&lt;input type="number" class="input inputTotalAmount detailview" id="inputTotalAmount" min="0" placeholder="Gesamtpreis ..." required>
+					&lt;button type="submit" class="button submitButton detailView">abschicken&lt;/button>
+				&lt;/div>
+			&lt;/div>`;
+
+        target.append(htmlCode);
+    }
+}</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#addArticleToShoppingList">addArticleToShoppingList</a></li><li><a href="global.html#deleteArticleFromShoppingList">deleteArticleFromShoppingList</a></li><li><a href="global.html#getCreator">getCreator</a></li><li><a href="global.html#getShoppingListId">getShoppingListId</a></li><li><a href="global.html#getShoppingListState">getShoppingListState</a></li><li><a href="global.html#idOfShoppingList">idOfShoppingList</a></li><li><a href="global.html#printShoppinglist">printShoppinglist</a></li><li><a href="global.html#shoppingListIsEditable">shoppingListIsEditable</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.6</a> on Wed Jan 20 2021 17:00:22 GMT+0100 (Central European Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+body {
+    width: 100%;
+    background-color: #ffffff;
+}
+
+#wrapper {
+    margin: 10px auto;
+}
+
+h1 {
+    background: #43D1AF;
+    padding: 20px 0;
+    font-size: 150%;
+    font-weight: 300;
+    text-align: center;
+    color: #ffffff;
+}
+
+#form {
+    margin: 10px auto;
+    padding: 16px;
+    background: #F7F7F7;
+}
+
+input[type=text], textarea {
+    outline: none;
+    box-sizing: border-box;
+    width: 100%;
+    background: #ffffff;
+    margin-bottom: 1%;
+    border: 1px solid #ccc;
+    padding: 0.5%;
+    color: #555555;
+}
+
+input[type=text]:focus, textarea:focus {
+    box-shadow: 0 0 5px #43D1AF;
+    padding: 0.5%;
+    border: 1px solid #43D1AF;
+}
+
+button, select {
+    color: #000000;
+    text-decoration: none;
+    background: #ffffff;
+    padding: 10px;
+    border: 2px solid #000000;
+    display: inline-block;
+    transition: all 0.5s ease 0s;
+}
+
+button:hover, select:hover {
+    color: #ffffff;
+    background: #43D1AF;
+    border-color: #43D1AF;
+    transition: all 0.5s ease 0s;
+}
+
+#buttons {
+    margin-left: 16px;
+}
+
+.openTask {
+    background-color: lightgoldenrodyellow;
+}
+
+.closedTask {
+    background-color: lightgrey;
+    text-decoration: line-through;
+}
+
+.selectedTask {
+    border: 3px dotted red;
+}

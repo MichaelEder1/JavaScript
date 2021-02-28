@@ -1,0 +1,39 @@
+body {
+    background-color: lightgray;
+    width: 80%;
+    margin: auto;
+}
+
+fieldset {
+    width: 40%;
+}
+
+#memoryField > * {
+    float: left;
+    box-sizing: border-box;
+    margin: 2px;
+    border: 5px solid blue;
+}
+
+#memoryField {
+    width: 920px;
+}
+
+.bigField {
+    width: 1380px !important;
+}
+
+.divs, .openPair{
+    width: 210px;
+    height: 223px;
+}
+
+.openPair>img{
+    opacity: 0;
+    transition: opacity 700ms linear;
+}
+
+.openPair{
+    visibility: hidden;
+    transition: visibility 700ms linear;
+}

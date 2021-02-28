@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Michael Eder (S1910456008)">
+    <title>Covid Social Shopping App - offene Listen</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous"/>
+</head>
+
+<body>
+<header>
+    <h1>Covid Social Shopping App</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#">Liste erstellen</a>
+        <a href="#">Meine Listen</a>
+        <a href="index.html" class="active">offene Listen</a>
+        <a href="#">übernommene Listen</a>
+        <a href="#">Mein Profil</a>
+        <button class="switch">Ansicht: <span class="labelJob">Hilfesuchender</span></button>
+    </nav>
+</header>
+<form class="newListForm seeker" action="#">
+    <label for="formlistName">Listenname:</label>
+    <input class="input" id="formlistName" type="text" placeholder="Listenname ..." required>
+    <br>
+    <label for="formDueDate">Fällig am:</label>
+    <input class="input" id="formDueDate" type="date" placeholder="Fälligkeitsdatum" required>
+    <br>
+    <button class="button submitForm">neue Liste anlegen</button>
+</form>
+<div id="listContainer"></div>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script type="module" src="js/main.js"></script>
+</html>

@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@700&family=Faster+One&family=Original+Surfer&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(50deg, rgba(241, 11, 183, 0.54), rgba(84, 118, 243, 0.92));
+    font-family: 'Baloo Tamma 2', cursive;
+    color: white;
+}
+
+#clock{
+    font-size: 7em;
+}
+
+#date{
+    font-size: 3em;
+}

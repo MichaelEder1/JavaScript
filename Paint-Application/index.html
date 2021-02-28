@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <title>Javascript Paint Application</title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+</head>
+
+<body>
+<h1>Javascript Paint Application</h1>
+
+<div id="paintArea"></div>
+
+<div class="form">
+    <form method="post" action="#" name="paintForm">
+        <div class="input">
+            <label for="shape">Shape</label>
+            <select name="shape" size="1" id="shape">
+                <option value="square">Square</option>
+                <option value="rectangle">Rectangle</option>
+                <option value="frame">Frame</option>
+                <!-- die neuen Figuren hinzufügen zum Auswählen -->
+                <option value="circle">Circle</option>
+                <option value="triangle">Triangle</option>
+                <option value="stickFigure">Strichm&auml;nnchen</option>
+            </select>
+        </div>
+
+        <div class="input">
+            <label for="color">Color</label>
+            <input type="color" name="color" class="color" id="color" value="#ff0000"/>
+        </div>
+
+        <div class="input">
+            <label for="size">Width</label>
+            <input type="text" name="width" id="width" value="100"/>
+        </div>
+
+        <div class="input">
+            <label for="size">Height</label>
+            <input type="text" name="height" id="height" value="100"/>
+        </div>
+
+        <div class="input">
+            <label for="size">Size</label>
+            <input type="text" name="size" id="size" value="10"/>
+        </div>
+
+        <div class="input">
+            <label for="positionX">positionX</label>
+            <input type="text" name="positionX" id="positionX" value="100"/>
+        </div>
+
+        <div class="input">
+            <label for="positionY">positionY</label>
+            <input type="text" name="positionY" id="positionY" value="100"/>
+        </div>
+
+        <input type="button" name="submit" value="Draw" id="draw"/>
+
+        <input type="button" name="delete" value="Delete all objects" id="empty"/><br/>
+    </form>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="paint.js"></script>
+<script type="text/javascript" src="objectES6.js"></script>
+</body>
+</html>

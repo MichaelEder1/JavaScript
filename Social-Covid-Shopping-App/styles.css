@@ -1,0 +1,281 @@
+/* Import Google Font: Red Hat Text & Red Hat Display */
+
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700&family=Red+Hat+Text:wght@400;500;700&display=swap");
+
+body {
+    font-family: "Red Hat Display", sans-serif;
+    width: 80%;
+    margin: 0 auto;
+    font-size: 1.5em;
+    background-color: #222222;
+    color: whitesmoke;
+}
+
+header {
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    border: 1px solid;
+    border-image: linear-gradient(45deg, #ff4e50 0%, #f9d423 51%, #ff4e50 100%) 1;
+    font-size: 1em;
+    margin-bottom: 1em;
+}
+
+nav a {
+    padding: 1em;
+    display: block;
+}
+
+.active {
+    font-weight: bolder;
+    background: #ffffff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.listEntry {
+    padding: 0.5em;
+    border: 0.2em solid;
+    border-image: linear-gradient(45deg, #ff4e50 0%, #f9d423 51%, #ff4e50 100%) 1;
+    margin: 1em 0;
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.icon {
+    align-self: flex-end;
+    font-size: 1.2em;
+}
+
+button {
+    background-image: linear-gradient(
+            45deg,
+            #ff4e50 0%,
+            #f9d423 51%,
+            #ff4e50 100%
+    );
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: #222222;
+    border-radius: 10px;
+    display: block;
+    font-weight: 700;
+    font-size: 0.5em;
+    outline: none;
+}
+
+button:hover {
+    background-position: right center;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 4em;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+h1,
+a {
+    background: #ee0979; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+            45deg,
+            #ff6a00,
+            #ee0979
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+            30deg,
+            #ff6a00,
+            #ee0979 100%
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h4 {
+    margin: 0;
+}
+
+div a, .editIcons {
+    cursor: pointer;
+}
+
+@media (max-width: 720px) {
+    body {
+        margin: 0px 0px;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        margin: 0px auto;
+    }
+
+    #listContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    nav {
+        padding: 1em;
+        display: block;
+        justify-content: center;
+    }
+
+    h1 {
+        font-size: 3em;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    #listContainer {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+}
+
+.tableContainer {
+    display: block;
+    width: 100%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.flex-table,
+.listInfo {
+    display: grid;
+    grid-auto-columns: auto;
+    grid-template-columns: 32% 32% 32% 4%;
+    grid-template-rows: 100% auto;
+    transition: 0.5s;
+}
+
+.flex-table.header .headings {
+    background: linear-gradient(45deg, #ff6a00, #ee0979 100%);
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.flex-row {
+    display: block;
+    width: 100%;
+    text-align: center;
+    border: solid 0.75px;
+    border-image: linear-gradient(45deg, #ff4e50 0%, #f9d423 51%, #ff4e50 100%) 1;
+}
+
+.rowspan {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 100%;
+}
+
+.column {
+    width: 100%;
+    padding: 0;
+}
+
+.column .flex-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 33.3%);
+    grid-template-rows: 100% 100% 100%;
+    width: 100%;
+    padding: 0;
+}
+
+.column .flex-row:hover {
+    background: #f5f5f5;
+    transition: 500ms;
+}
+
+.flex-cell {
+    text-align: center;
+    border-right: 2px solid;
+}
+
+.listInfo > div {
+    justify-self: center;
+}
+
+.totalAmount {
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 1em;
+}
+
+.totalAmount > button {
+    margin: 0 0 0 10px;
+}
+
+.totalAmount > label {
+    margin-right: 0.5em;
+}
+
+input {
+    border: solid 2px;
+    border-image: linear-gradient(45deg, #ff4e50 0%, #f9d423 51%, #ff4e50 100%) 1;
+    background: #222222;
+    color: #ffffff;
+}
+
+::placeholder {
+    color: #ffffff;
+}
+
+
+.buttonContainer {
+    margin-top: 1em;
+}
+
+nav button {
+    align-self: center;
+}
+
+.editIcons{
+    margin-left: 0.1em;
+    display: inline;
+}
+
+.editIcons i {
+    padding: 0 0.2em;
+}
+
+button:disabled{
+    text-decoration: line-through;
+    background: #333333;
+    color: white;
+}
+
+.newListForm{
+    display: grid;
+    grid-row: auto;
+}
+
+.input{
+    padding: 1em;
+    margin-top: 0.5em;
+}
+
+/* Change calendar symbol in input field to white */
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
