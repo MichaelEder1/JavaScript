@@ -1,6 +1,6 @@
 # Weather App
 
-This betting app displays the current weather and a textual description of the weather. For this I use the free API from [OenWeatherMap.org](https://openweathermap.org/api).
+This betting app displays the current weather and a textual description of the weather. For this I use the free API from [OpenWeatherMap.org](https://openweathermap.org/api).
 
 When you click on the temperature indicator, the indication changes from Celsius to Fahrenheit or the other way around.
 
